@@ -1,0 +1,618 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Dott. Franco Alessandri, Studio Chirurgico Ginecologico a Genova</title>
+<meta name="description" content="Studio Chirurgico Ginecologico del Dott. Franco Alessandri. Visite e chirurgia ginecologica a Genova e Santa Margherita Ligure. Prenota una visita allo 010 543146.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="it_IT">
+<meta property="og:title" content="Dott. Franco Alessandri, Studio Chirurgico Ginecologico">
+<meta property="og:description" content="Chirurgia e ginecologia a Genova e Santa Margherita Ligure. Prenota una visita allo 010 543146.">
+<link rel="icon" href="data:,">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Physician",
+  "name": "Dott. Franco Alessandri, Studio Chirurgico Ginecologico",
+  "url": "https://www.alessandrifranco.com/",
+  "telephone": "+39 010 543146",
+  "email": "studiofrancoalessandri@gmail.com",
+  "medicalSpecialty": "Gynecologic",
+  "address": [
+    {
+      "@type": "PostalAddress",
+      "streetAddress": "Via Brigata Bisagno 4/19, 5° piano",
+      "addressLocality": "Genova",
+      "addressCountry": "IT"
+    },
+    {
+      "@type": "PostalAddress",
+      "streetAddress": "Portofino Med, Via Partigiani d'Italia 31",
+      "addressLocality": "Santa Margherita Ligure",
+      "addressCountry": "IT"
+    }
+  ]
+}
+</script>
+<style>
+@font-face {
+  font-family: "Bricolage Grotesque";
+  src: url("fonts/BricolageGrotesque-var.woff2") format("woff2");
+  font-weight: 200 800;
+  font-display: swap;
+}
+
+:root {
+  --paper: oklch(0.965 0.008 235);
+  --panel: oklch(0.915 0.016 240);
+  --ink: oklch(0.25 0.035 255);
+  --ink-2: oklch(0.42 0.03 255);
+  --ochre: oklch(0.78 0.13 80);
+
+  --font: "Bricolage Grotesque", "Segoe UI Variable Display", "Segoe UI", system-ui, sans-serif;
+
+  /* scale 1.25 */
+  --step--1: 0.9375rem;
+  --step-0: clamp(1.0625rem, 1.03rem + 0.15vw, 1.125rem);
+  --step-1: clamp(1.3125rem, 1.25rem + 0.3vw, 1.4375rem);
+  --step-2: clamp(1.625rem, 1.5rem + 0.55vw, 1.875rem);
+  --step-3: clamp(2rem, 1.75rem + 1.1vw, 2.5rem);
+  --step-4: clamp(2.5rem, 2rem + 2.2vw, 3.5rem);
+  --step-5: clamp(3rem, 2.2rem + 3.6vw, 5rem);
+
+  --ease: cubic-bezier(0.16, 1, 0.3, 1);
+  --radius: 2px;
+  --gutter: 24px;
+  --gap: 32px;
+  --container: 75rem;
+  --bar: 72px;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html, body { overflow-x: clip; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  min-height: 100dvh;
+  padding-bottom: calc(var(--bar) + env(safe-area-inset-bottom, 0px));
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font);
+  font-size: var(--step-0);
+  font-weight: 400;
+  line-height: 1.5;
+  font-optical-sizing: auto;
+}
+
+h1, h2, h3, p, ul, dl, dd, figure { margin: 0; }
+ul { padding: 0; list-style: none; }
+h1, h2, h3 { line-height: 1.05; font-weight: 800; letter-spacing: -0.02em; overflow-wrap: break-word; min-width: 0; }
+
+a { color: inherit; text-decoration-thickness: 1px; text-underline-offset: 0.2em; }
+a:hover { text-decoration-thickness: 2px; }
+
+:focus-visible { outline: 3px solid var(--ink); outline-offset: 3px; border-radius: var(--radius); }
+
+.wrap {
+  width: min(100% - 2 * var(--gutter), var(--container));
+  margin-inline: auto;
+}
+
+.tap { display: inline-flex; align-items: center; min-height: 44px; }
+
+.skip {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  z-index: 10;
+  padding: 12px 16px;
+  background: var(--ink);
+  color: var(--paper);
+  border-radius: var(--radius);
+  transform: translateY(-200%);
+  transition: transform 200ms var(--ease);
+}
+.skip:focus { transform: none; }
+
+/* Primary button: one label everywhere */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  min-height: 48px;
+  padding: 12px 24px;
+  background: var(--ochre);
+  color: var(--ink);
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: var(--radius);
+  transition: transform 150ms var(--ease);
+}
+.btn:hover { text-decoration: underline; text-decoration-thickness: 2px; }
+.btn:active { transform: scale(0.98); }
+
+.slot-inline {
+  padding: 0 4px;
+  background: var(--panel);
+  color: var(--ink-2);
+  border-radius: var(--radius);
+  font-weight: 400;
+  white-space: nowrap;
+}
+
+/* Header */
+.site-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  min-height: 64px;
+}
+.wordmark { font-weight: 600; letter-spacing: -0.01em; }
+.wordmark span { font-weight: 400; }
+.head-nav { display: none; }
+.hero .cta-row { display: none; }
+
+/* Hero */
+.hero { padding-block: 40px 80px; }
+.hero-text { container-type: inline-size; }
+h1 { font-size: min(9rem, 18.5cqi); line-height: 0.9; letter-spacing: -0.045em; }
+h1 .dott {
+  position: relative;
+  display: block;
+  width: max-content;
+  margin-bottom: 16px;
+  padding-bottom: 16px;
+  font-size: var(--step-3);
+  font-weight: 400;
+  letter-spacing: -0.01em;
+  line-height: 1;
+}
+h1 .dott::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 6px;
+  background: var(--ochre);
+  border-radius: var(--radius);
+  transform-origin: left center;
+  animation: draw 600ms var(--ease) 200ms both;
+}
+@keyframes draw { from { transform: scaleX(0); } to { transform: scaleX(1); } }
+h1 .line { display: block; }
+.hero-lead {
+  max-width: 32ch;
+  margin-top: 24px;
+  font-size: var(--step-1);
+  line-height: 1.3;
+  text-wrap: balance;
+}
+.cta-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 24px;
+  margin-top: 32px;
+}
+.cta-num { font-weight: 600; font-variant-numeric: tabular-nums; }
+
+.portrait {
+  width: 12.5rem;
+  max-width: 100%;
+  margin: 48px 0 0 auto;
+}
+/* source is 200x200 with a white rounded frame: scale hides it, size stays at native 1x */
+.photo {
+  overflow: hidden;
+  aspect-ratio: 1;
+  background: var(--panel);
+  border-radius: var(--radius);
+}
+.photo img { display: block; width: 100%; height: 100%; object-fit: cover; transform: scale(1.1); }
+.portrait figcaption { margin-top: 8px; font-size: var(--step--1); color: var(--ink-2); }
+
+/* Visite */
+.visite { padding-block: 96px 120px; }
+.visite h2 { font-size: var(--step-4); }
+.visite-intro { max-width: 34ch; margin-top: 16px; color: var(--ink-2); }
+.groups { display: grid; gap: 48px; margin-top: 48px; }
+.group h3 {
+  padding-bottom: 16px;
+  border-bottom: 2px solid var(--ink);
+  font-size: var(--step-1);
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+.group li { border-bottom: 1px solid var(--panel); }
+.group li > span { display: block; padding-block: 12px; }
+.group summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  min-height: 48px;
+  padding-block: 8px;
+  cursor: pointer;
+  list-style: none;
+}
+.group summary::-webkit-details-marker { display: none; }
+.group summary::after {
+  content: "+";
+  flex: none;
+  font-size: var(--step-1);
+  line-height: 1;
+  transition: transform 200ms var(--ease);
+}
+.group details[open] summary::after { transform: rotate(45deg); }
+.group details p { padding-bottom: 16px; color: var(--ink-2); }
+
+/* Chirurgia */
+.chirurgia { padding-block: 80px; background: var(--panel); }
+.chirurgia h2 { font-size: var(--step-4); }
+.statement {
+  max-width: 22ch;
+  margin-top: 24px;
+  font-size: var(--step-2);
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+}
+.statement .slot-inline { display: table; margin-top: 16px; background: var(--paper); font-size: var(--step--1); font-weight: 400; letter-spacing: 0; white-space: normal; }
+.op-groups { display: grid; gap: 40px; margin-top: 56px; }
+.op-groups h3 {
+  padding-top: 16px;
+  border-top: 2px solid var(--ink);
+  font-size: var(--step-0);
+  font-weight: 800;
+  letter-spacing: 0;
+}
+.op-groups ul { margin-top: 16px; }
+.op-groups li { padding-block: 4px; }
+.op-note { display: block; margin-top: 4px; font-size: var(--step--1); color: var(--ink-2); }
+.op-note .slot-inline { background: var(--paper); }
+.where { margin-top: 80px; padding-top: 24px; border-top: 1px solid var(--ink); }
+.where-label {
+  font-size: var(--step--1);
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ink-2);
+}
+.where-places {
+  margin-top: 16px;
+  font-size: var(--step-3);
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+  text-wrap: balance;
+}
+.where-note { max-width: 60ch; margin-top: 16px; color: var(--ink-2); }
+
+/* Chi e */
+.chi { padding-block: 104px 96px; }
+.chi h2 { max-width: 12ch; font-size: var(--step-5); letter-spacing: -0.035em; line-height: 0.95; }
+.chi-body { margin-top: 40px; }
+.slot-bio {
+  display: grid;
+  place-items: center;
+  min-height: 12rem;
+  padding: 24px;
+  background: var(--panel);
+  color: var(--ink-2);
+  border-radius: var(--radius);
+}
+.slot-link { margin-top: 8px; color: var(--ink-2); }
+
+/* Dove */
+.dove { padding-block: 96px 120px; border-top: 2px solid var(--ink); }
+.dove h2 { font-size: var(--step-5); letter-spacing: -0.035em; }
+.dove-invite { max-width: 44ch; margin-top: 16px; }
+.dove .cta-row { margin-top: 24px; }
+.studi { display: grid; gap: 56px; margin-top: 72px; }
+.studio { display: grid; align-content: start; }
+.studio h3 { font-size: var(--step-4); letter-spacing: -0.035em; }
+.studio .addr { margin-top: 16px; font-size: var(--step-1); line-height: 1.35; }
+.studio .tel { margin-top: 8px; font-weight: 600; font-variant-numeric: tabular-nums; }
+.contatti {
+  display: grid;
+  gap: 24px;
+  margin-top: 72px;
+  padding-top: 24px;
+  border-top: 1px solid var(--ink);
+}
+.contatti dt { font-size: var(--step--1); color: var(--ink-2); }
+.contatti dd { overflow-wrap: anywhere; }
+
+/* Footer */
+.site-foot { padding-block: 48px 40px; border-top: 2px solid var(--ink); font-size: var(--step--1); color: var(--ink-2); }
+.foot-grid { display: grid; gap: 24px; }
+.foot-name { font-size: var(--step-0); font-weight: 600; color: var(--ink); }
+.foot-name span { font-weight: 400; }
+.site-foot .slot-inline { white-space: normal; }
+.foot-note { margin-top: 40px; }
+
+/* Mobile fixed CTA bar */
+.cta-bar {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 5;
+  padding: 8px 16px calc(8px + env(safe-area-inset-bottom, 0px));
+  background: var(--paper);
+  border-top: 1px solid var(--ink);
+}
+.cta-bar .btn { display: flex; justify-content: space-between; width: 100%; min-height: 56px; }
+
+@media (min-width: 40em) {
+  .groups { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 48px 32px; }
+  .op-groups { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .studi { grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); grid-template-rows: repeat(4, auto); gap: 0 var(--gap); }
+  .studio { grid-row: span 4; grid-template-rows: subgrid; }
+  .contatti { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px var(--gap); }
+  .foot-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--gap); }
+}
+
+@media (min-width: 60em) {
+  :root { --gutter: 48px; --gap: 64px; }
+  body { padding-bottom: 0; }
+  .cta-bar { display: none; }
+  .hero .cta-row { display: flex; }
+  .head-nav .btn { background: transparent; border: 2px solid var(--ink); }
+
+  .site-head { min-height: 72px; }
+  .head-nav { display: flex; align-items: center; gap: 32px; }
+  .head-nav ul { display: flex; gap: 24px; }
+  .head-nav a:not(.btn) { display: inline-flex; align-items: center; min-height: 44px; text-decoration: none; }
+  .head-nav a:not(.btn):hover { text-decoration: underline; }
+
+  .hero { padding-block: 48px 120px; }
+  .hero-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 12.5rem;
+    gap: var(--gap);
+    align-items: end;
+  }
+  .portrait { margin: 0; }
+
+  .visite { padding-block: 128px 144px; }
+  .visite-grid { display: grid; grid-template-columns: minmax(0, 4fr) minmax(0, 8fr); gap: var(--gap); align-items: start; }
+  .visite-head { position: sticky; top: 32px; }
+  .groups { grid-template-columns: minmax(0, 1fr) minmax(0, 1.15fr) minmax(0, 0.85fr); gap: var(--gap) 32px; margin-top: 0; }
+
+  .chirurgia { padding-block: 104px 96px; }
+  .chir-grid { display: grid; grid-template-columns: minmax(0, 4fr) minmax(0, 8fr); gap: var(--gap); align-items: start; }
+  .op-groups { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 32px; margin-top: 0; padding-top: 8px; }
+  .where { margin-top: 96px; }
+
+  .chi { padding-block: 136px 120px; }
+  .chi-grid { display: grid; grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); gap: var(--gap); align-items: end; }
+  .chi-body { margin-top: 0; }
+
+  .dove { padding-block: 128px 144px; }
+  .dove-headrow { display: grid; grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); gap: var(--gap); align-items: end; }
+  .dove-invite { margin-top: 0; }
+  .studi { margin-top: 96px; }
+  .contatti { grid-template-columns: repeat(4, minmax(0, 1fr)); margin-top: 96px; }
+  .contatti > div:first-child { grid-column: span 2; }
+  .contatti > div:last-child { grid-column: 1 / -1; }
+
+  .site-foot { padding-block: 64px 48px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Vai al contenuto</a>
+
+<header class="wrap site-head">
+  <p class="wordmark"><span>Dott.</span> Franco Alessandri</p>
+  <nav class="head-nav" aria-label="Sezioni">
+    <ul>
+      <li><a href="#visite">Visite</a></li>
+      <li><a href="#chirurgia">Chirurgia</a></li>
+      <li><a href="#dove">Dove</a></li>
+      <li><a href="#curriculum">Curriculum</a></li>
+    </ul>
+    <a class="btn" href="tel:+39010543146">Prenota una visita</a>
+  </nav>
+</header>
+
+<main id="main">
+  <section class="hero" aria-labelledby="hero-title">
+    <div class="wrap hero-grid">
+      <div class="hero-text">
+        <h1 id="hero-title"><span class="dott">Dott.</span> <span class="line">Franco</span> <span class="line">Alessandri</span></h1>
+        <p class="hero-lead">Chirurgia e ginecologia a Genova e Santa Margherita Ligure.</p>
+        <p class="cta-row"><a class="btn" href="tel:+39010543146">Prenota una visita</a> <span class="cta-num">010 543146</span></p>
+      </div>
+      <figure class="portrait">
+        <div class="photo"><img src="img/dottore.jpg" width="200" height="200" alt="Il Dott. Franco Alessandri in camice bianco"></div>
+        <figcaption>Studio Chirurgico Ginecologico</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="visite" id="visite" aria-labelledby="visite-title">
+    <div class="wrap visite-grid">
+      <div class="visite-head">
+        <h2 id="visite-title">Ambulatorio</h2>
+        <p class="visite-intro">Visite su appuntamento presso gli studi di Genova e di Santa Margherita Ligure.</p>
+      </div>
+      <div class="groups">
+        <div class="group">
+          <h3>Visite</h3>
+          <ul>
+            <li><span>Visita ginecologica</span></li>
+            <li>
+              <details>
+                <summary>Visita uroginecologica</summary>
+                <p>La visita uroginecologica serve a verificare la presenza di un cedimento parziale o totale <span class="slot-inline">[TESTO COMPLETO QUI]</span></p>
+              </details>
+            </li>
+            <li><span>Visita ostetrica</span></li>
+          </ul>
+        </div>
+        <div class="group">
+          <h3>Esami</h3>
+          <ul>
+            <li><span>Pap test e HPV test</span></li>
+            <li><span>Tamponi vaginali</span></li>
+            <li><span>Colposcopia</span></li>
+            <li>
+              <details>
+                <summary>Isteroscopia</summary>
+                <p>È una procedura che consente di esaminare la cavità dell’utero <span class="slot-inline">[TESTO COMPLETO QUI]</span></p>
+              </details>
+            </li>
+          </ul>
+        </div>
+        <div class="group">
+          <h3>Ecografia</h3>
+          <ul>
+            <li><span>Ecografia</span></li>
+            <li><span>Ecografia 3D</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="chirurgia" id="chirurgia" aria-labelledby="chir-title">
+    <div class="wrap">
+      <div class="chir-grid">
+        <div>
+          <h2 id="chir-title">Chirurgia</h2>
+          <p class="statement">La chirurgia robotica rappresenta l’ultima frontiera della chirurgia mini-invasiva <span class="slot-inline">[TESTO COMPLETO DEL DOTTORE QUI]</span></p>
+        </div>
+        <div class="op-groups">
+          <div>
+            <h3>Mini-invasiva</h3>
+            <ul>
+              <li>Chirurgia mini-invasiva</li>
+              <li>Chirurgia robotica</li>
+              <li>Laparoscopia single port</li>
+              <li>Isteroscopia operativa</li>
+            </ul>
+          </div>
+          <div>
+            <h3>Patologie</h3>
+            <ul>
+              <li>Embolizzazione fibromi uterini</li>
+              <li>Miomectomia</li>
+              <li>Isterectomia</li>
+              <li>Endometriosi</li>
+              <li>Prolasso ed incontinenza urinaria</li>
+            </ul>
+          </div>
+          <div>
+            <h3>Oncologia e ostetricia</h3>
+            <ul>
+              <li>Chirurgia oncologica
+                <span class="op-note">Presso il Policlinico S. Martino, IRCCS, centro di riferimento oncologico. <span class="slot-inline">[TESTO COMPLETO QUI]</span></span>
+              </li>
+              <li>Taglio cesareo</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="where">
+        <p class="where-label">Dove si opera</p>
+        <p class="where-places">Villa Montallegro, Villa Serena, Policlinico S.&nbsp;Martino</p>
+        <p class="where-note">Interventi presso strutture private a Genova e negli studi. Chirurgia oncologica al Policlinico S. Martino, IRCCS.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="chi" id="curriculum" aria-labelledby="chi-title">
+    <div class="wrap chi-grid">
+      <h2 id="chi-title">Volere bene alla propria salute</h2>
+      <div class="chi-body">
+        <div class="slot-bio">[BIO DEL DOTTORE QUI]</div>
+        <a class="tap slot-link" href="#">[CURRICULUM PDF QUI]</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="dove" id="dove" aria-labelledby="dove-title">
+    <div class="wrap">
+      <div class="dove-headrow">
+        <h2 id="dove-title">Dove</h2>
+        <div>
+          <p class="dove-invite">Vi invitiamo a contattare la nostra segreteria per concordare la data più adatta alle vostre esigenze.</p>
+          <p class="cta-row"><a class="btn" href="tel:+39010543146">Prenota una visita</a> <span class="cta-num">010 543146</span></p>
+        </div>
+      </div>
+
+      <div class="studi">
+        <article class="studio" aria-labelledby="studio-ge">
+          <h3 id="studio-ge">Genova</h3>
+          <p class="addr">Via Brigata Bisagno 4/19<br>(angolo S. Zita), 5° piano</p>
+          <p class="tel"><a class="tap" href="tel:+39010543146">Tel 010 543146</a></p>
+          <p><a class="tap" href="https://www.google.com/maps/search/?api=1&amp;query=Via%20Brigata%20Bisagno%204%2C%20Genova" target="_blank" rel="noopener">Apri nella mappa</a></p>
+        </article>
+        <article class="studio" aria-labelledby="studio-sml">
+          <h3 id="studio-sml">Santa Margherita Ligure</h3>
+          <p class="addr">Portofino Med<br>Via Partigiani d’Italia 31</p>
+          <p class="tel"><a class="tap" href="tel:+39010543146">Tel 010 543146</a></p>
+          <p><a class="tap" href="https://www.google.com/maps/search/?api=1&amp;query=Portofino%20Med%2C%20Via%20Partigiani%20d%27Italia%2031%2C%20Santa%20Margherita%20Ligure" target="_blank" rel="noopener">Apri nella mappa</a></p>
+        </article>
+      </div>
+
+      <dl class="contatti">
+        <div>
+          <dt>Email</dt>
+          <dd><a class="tap" href="mailto:studiofrancoalessandri@gmail.com">studiofrancoalessandri@gmail.com</a></dd>
+        </div>
+        <div>
+          <dt>Cellulare</dt>
+          <dd><a class="tap" href="tel:+393404279206">340 427 9206</a></dd>
+        </div>
+        <div>
+          <dt>Virtual tour</dt>
+          <dd><a class="tap" href="https://tour.stefanoravera.it/tour/bJubQ8yWvfZylO-QIJZwM/Studio_Chirurgico_Ginecologico_Dr__Franco_Alessandri__Genova_" target="_blank" rel="noopener">Lo studio di Genova</a></dd>
+        </div>
+        <div>
+          <dt>Assicurazioni</dt>
+          <dd>Convenzionato con tutte le principali Compagnie di Assicurazione.</dd>
+        </div>
+      </dl>
+    </div>
+  </section>
+</main>
+
+<footer class="site-foot">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <p class="foot-name"><span>Dott.</span> Franco Alessandri</p>
+        <p>Studio Chirurgico Ginecologico</p>
+      </div>
+      <div>
+        <p>Via Brigata Bisagno 4/19, Genova</p>
+        <p>Via Partigiani d’Italia 31, Santa Margherita Ligure</p>
+      </div>
+      <div>
+        <p><span class="slot-inline">[P.IVA / DATI LEGALI QUI]</span></p>
+        <p><span class="slot-inline">[PRIVACY POLICY QUI]</span></p>
+      </div>
+    </div>
+    <p class="foot-note">Mockup di restyling, non è il sito ufficiale.</p>
+  </div>
+</footer>
+
+<div class="cta-bar">
+  <a class="btn" href="tel:+39010543146"><span>Prenota una visita</span> <span class="cta-num">010 543146</span></a>
+</div>
+</body>
+</html>
